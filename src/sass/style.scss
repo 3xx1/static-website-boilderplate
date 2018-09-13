@@ -1,1 +1,23 @@
 // Your style!
+.one {
+  width: 100%;
+  height: 300px;
+  background: #1a2b3c;
+  position: relative;
+
+
+  #svg-bg {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: none;
+    top: 100%;
+    left: 0;
+  }
+}
+
+.two {
+  width: 100%;
+  height: 300px;
+  background: #ffffff;
+}
