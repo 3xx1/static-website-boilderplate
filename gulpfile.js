@@ -14,11 +14,6 @@ var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var watch = require('gulp-watch');
 
-// constructors
-var app = express();
-var http = require('http').Server(app);
-app.use( express.static('./public') );
-
 // asset copy location maps
 var copyLocations = [
   {
@@ -30,7 +25,11 @@ var copyLocations = [
     dest: './public'
   },
   {
-    src: './src/vendor/**/*.*',
+    src: './src/vendor/**/*.css',
+    dest: './public/css'
+  },
+  {
+    src: './src/vendor/**/*.js',
     dest: './public/vendor'
   }
 ];
@@ -107,8 +106,10 @@ gulp.task('scripts:watch', function() {
 
 /* SERVER */
 gulp.task('server', function() {
-  http.listen(5050, function() {
-    log.info('Server Started!! Listening on port: 5050')
+  connect.server({
+    root: './public',
+    port: 5050,
+    livereload: true
   });
 });
 

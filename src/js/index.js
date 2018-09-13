@@ -1,1 +1,1 @@
-console.log('your javascript')
+console.log('your javascript', $);

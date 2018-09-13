@@ -30,8 +30,5 @@
     "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.1",
     "watchify": "^3.11.0"
-  },
-  "dependencies": {
-    "express": "^4.16.3"
   }
 }
